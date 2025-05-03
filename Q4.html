@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table</title>
+    <style>
+        @font-face{ font-family: Daikon; src: url('Daikon-SemiBold.ttf'); }
+        @font-face{ font-family: Carmen; src: url('Carmen\ Sans\ Bold.otf'); } 
+        body {
+            font-family: Carmen;
+            margin: 20px;
+            background-color: green;
+            border: 5px;
+            color: rgb(42, 51, 41);
+        }
+        label, input, button {
+            font-family: Carmen;
+            margin: 5px 0;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 3px;
+            color: black;
+        }
+        input, button {
+            background-color: white;
+        }
+        input:hover, button:hover{
+            scale: 1.025;
+            transition-duration: 300ms;
+        }
+        #tableContainer table {
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: rgb(211, 232, 202);
+        }
+        #tableContainer td {
+            border: 2px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+    <script src="Q4.js"></script>
+</head>
+<body>
+    <h2>Generate a Multiplication Table</h2>
+    <div>
+        <label for="rows">Enter number of rows (2–10):</label>
+        <input type="number" id="rows" name="rows" min="2" max="10">
+    </div>
+    <div>
+        <label for="cols">Enter number of columns (2–10):</label>
+        <input type="number" id="cols" name="cols" min="2" max="10">
+    </div>
+    <div>
+        <button type="button" onclick="generateTable()">Click here when ready!</button>
+    </div>
+    <div id="tableContainer"><p>The table will appear here.</p></div>
+</body>
+</html>
